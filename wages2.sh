@@ -15,5 +15,5 @@ cat $1 | tr ',' ' ' | sort -k 4 -n | tail -n 10 | grep -c female
 
 echo "effect of graduating college on minimum wage"
 minhs=$(cat $1|grep ",12," | cut -d , -f 4| sort -n | head -n 1)
-mincollege=$( cat $1|grep ",16," | cut -d , -f 4| sort -n | head -n 1)
+mincollege=$(cat $1|grep ",16," | cut -d , -f 4| sort -n | head -n 1)
 echo "$mincollege - $minhs" | bc
